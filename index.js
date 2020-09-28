@@ -12,7 +12,7 @@ const app = express();
 app.engine('hbs',hbs({extname:'hbs'}));
 app.set('view engine','hbs');
 
-app.use('/profile',router);
+app.use('/',router);
 app.use(express.static(path.join(__dirname,'public')));
 
 app.listen(
